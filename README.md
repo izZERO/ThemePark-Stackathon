@@ -1,8 +1,5 @@
 # ThemePark-Stackathon
 
-
-![HomePage](Link)
-
 ## Date: 20/10/2025
 
 ### By:
@@ -10,14 +7,18 @@
 ### | [Hasan Al Dhaif](https://github.com/izZERO)
 ### | [Fatema Abdulla](https://github.com/Fatema-Abdulla)
 ***
-### | [ERD](https://lucid.app/lucidchart/ff3023cd-d98d-48c8-a6a4-d534bf7e0cac/edit?view_items=d.h1gfrxB4IE&page=0_0&invitationId=inv_bdab7c2e-6a40-45cf-b1d4-c25cc91007be)
+### ***ERD***
+#### View ERD [here](https://lucid.app/lucidchart/ff3023cd-d98d-48c8-a6a4-d534bf7e0cac/edit?view_items=d.h1gfrxB4IE&page=0_0&invitationId=inv_bdab7c2e-6a40-45cf-b1d4-c25cc91007be)
+***
 
-### Component Hierarchy Diagram
+### ***Component Hierarchy Diagram***
 ![Component Hierarchy Diagram](/public/Images/ThemePark-Stackathon.drawio.png)
 
-### | [Figma Link](https://www.figma.com/design/A3gAi5xr4SpByDtUXXIhkN/Untitled?node-id=1-2&t=yDzYn8Sc0GqlwSOT-1)
-
-![FigmaDesign](/public/images/Profile/Figma.png)
+### ***Wireframe***
+##### Home Page
+![Home Page](/public/Images/Home.png)
+##### Add a new item Page
+![Add a new item Page](/public/Images/new-item.png)
 ***
 ### ***Description***
 
@@ -34,12 +35,13 @@
 
 ***
 
-# Featuring in the project
+### ***Featuring in the project***
 
 * Board of Missing | Found Items
 * Report Missing | Found Items
 * Email sent to owner when Found
-## ***Project Preview***
+***
+### ***Project Preview***
 
 ![HomePage](/public/images/Profile/homepage.png)
 ***
