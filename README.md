@@ -18,7 +18,7 @@
 ##### Home Page
 ![Home Page](/public/Images/HomePage.png)
 ##### Add a new item Page
-![Add a new item Page](/public/Images/New-item.png)
+![Add a new item Page](/public/Images/Newitem.png)
 ***
 ### ***Description***
 
