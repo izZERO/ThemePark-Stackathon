@@ -16,9 +16,9 @@
 
 ### ***Wireframe***
 ##### Home Page
-![Home Page](/public/Images/Home.png)
+![Home Page](/public/Images/HomePage.png)
 ##### Add a new item Page
-![Add a new item Page](/public/Images/new-item.png)
+![Add a new item Page](/public/Images/New-item.png)
 ***
 ### ***Description***
 
