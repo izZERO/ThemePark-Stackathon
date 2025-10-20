@@ -12,13 +12,13 @@
 ***
 
 ### ***Component Hierarchy Diagram***
-![Component Hierarchy Diagram](/public/Images/ThemePark-Stackathon.drawio.png)
+![Component Hierarchy Diagram](/public/images/ThemePark-Stackathon.drawio.png)
 
 ### ***Wireframe***
 ##### Home Page
 ![Home Page](/public/images/Home.png)
 ##### Add a new item Page
-![Home Page](/public/images/new-item.png)
+![Add a new item Page](/public/images/new-item.png)
 ***
 ### ***Description***
 
