@@ -66,7 +66,16 @@ exports.item_index_get = async (req, res) => {
 
 exports.item_create_post = async (req, res) => {
   try {
-    await Item.create(req.body)
+    const item = await Item.create(req.body)
+
+    if (!req.file) {
+      item.image = "../public/Items/no-image.png"
+    } else {
+      item.image = req.file.path
+    }
+
+    await item.save()
+
     res.status(200).send("Item Has Been Created!")
   } catch (error) {
     res.status(500).send({ msg: "Error creating a new item!", error })

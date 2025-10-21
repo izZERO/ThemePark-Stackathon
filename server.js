@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(morgan("dev"))
+app.use("/public/Items", express.static("./public/Items"))
 
 const itemRouter = require("./routes/itemRouter")
 app.use("/", itemRouter)
