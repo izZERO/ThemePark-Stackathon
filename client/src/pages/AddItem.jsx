@@ -14,27 +14,24 @@ const AddItem = () => {
     ownername: "",
     status: "Lost",
     email: "",
+    image: "",
   }
-  const initialImage = { image: null }
 
   const [formValues, setFormValues] = useState(initialState)
-  const [selectedImage, setSelectedImage] = useState(initialImage)
 
   const handleChange = (e) => {
-    if (e.target.type === "file") {
-      setSelectedImage({ [e.target.name]: e.target.files[0] })
-    } else {
-      setFormValues({ ...formValues, [e.target.name]: e.target.value })
-    }
+    setFormValues({
+      ...formValues,
+      [e.target.name]:
+        e.target.type === "file" ? e.target.files[0] : e.target.value,
+    })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // await AddNewItem(formValues)
+    await AddNewItem(formValues)
     setFormValues(initialState)
-    setSelectedImage(initialImage)
     console.log(formValues)
-    console.log(selectedImage)
     navigate("/")
   }
 
@@ -120,7 +117,7 @@ const AddItem = () => {
               name="image"
               type="file"
               onChange={handleChange}
-              autoComplete="off"
+              accept="image/*"
             />
           </Form.Group>
           <Button
