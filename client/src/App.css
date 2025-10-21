@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-home {
+  margin: 8px;
+  position: relative;
+  left: 90%;
+}
+
+.btn-add-item {
+  margin: 8px;
+  position: relative;
+  left: 75%;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-form {
+  width: 500px;
+}
+
+.filed-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.filed-label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.filed-input {
+  width: 100%;
+}
