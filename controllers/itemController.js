@@ -28,7 +28,7 @@ const sendEmail = async (data) => {
         <p>Please visit our Security Office during the hours above to collect your item.</p>
 
         <div style="text-align: center; margin: 30px 0;">
-          <a href="http://localhost:3001/${data._id}"
+          <a href="http://localhost:5173/recover/${data._id}"
             style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
             ✅ Click Here After You Recover Your Item
           </a>
@@ -47,7 +47,7 @@ const sendEmail = async (data) => {
 
     You can come recover it between 9am to 8pm at our Security Office.
 
-    Once you recover your item, please click this link to confirm: http://localhost:3001/${data._id}
+    Once you recover your item, please click this link to confirm: http://localhost:5173/recover/${data._id}
 
     Thank you!
     Zero's Park Security Department
