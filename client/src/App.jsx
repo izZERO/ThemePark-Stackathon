@@ -8,7 +8,7 @@ import "./App.css"
 function App() {
   return (
     <>
-      <main>
+      <main className="bg-dark">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/additem" element={<AddItem />} />
