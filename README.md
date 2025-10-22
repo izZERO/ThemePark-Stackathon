@@ -43,8 +43,12 @@
 ***
 ### ***Project Preview***
 
-![HomePage](/public/images/Profile/homepage.png)
+##### Home Page
+![Home Page](/public/Images/HomePage.png)
+##### Add a new item Page
+![Add a new item Page](/public/Images/Newitem.png)
 ***
-![SignInPage](/public/images/Profile/Sign-In.png)
-***
-![SignUpPage](/public/images/Profile/Sign-Up.png)
+### ***Credits***
+
+#### [React Bootstrap](https://react-bootstrap.netlify.app/)
+#### [Multer](https://multer.surge.sh/)
