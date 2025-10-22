@@ -9,7 +9,7 @@ import "./App.css"
 function App() {
   return (
     <>
-      <main className="bg-dark">
+      <main className="bg-dark min-vh-100">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/additem" element={<AddItem />} />

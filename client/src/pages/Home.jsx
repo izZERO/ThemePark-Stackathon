@@ -28,34 +28,32 @@ const Home = () => {
         Lost an item? Report it Missing here!
       </Button>
       <h1 className="title-home">Lost Item List</h1>
-      <Container fluid>
-        <Row>
+      <Container fluid style={{ marginBottom: "16px" }}>
+        <Row className="g-4">
           {items.map((item) => (
             <Col key={item._id} xs={12} sm={6} md={4} lg={3}>
-              <Card style={{ width: "18rem", height: "15rem" }}>
+              <Card style={{ width: "18rem" }}>
                 <Card.Img
                   variant="top"
-                  src={item.image}
-                  alt={`This image for item`}
+                  src={`/Items/${item.image}`}
+                  alt="Lost item image"
+                  style={{ height: "165px", objectFit: "cover" }}
                 />
                 <Card.ImgOverlay>
-                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Title className="item-name">{item.name}</Card.Title>
                   <Badge bg="warning" text="dark">
                     {item.status}
                   </Badge>
                 </Card.ImgOverlay>
-                <Card.Body className="card-body-flex">
-                  <div className="card-text-grow">
-                    <Card.Text className="text-dark">
-                      {item.description || <span>&nbsp;</span>}
-                    </Card.Text>
-                    <Card.Text className="text-secondary">
-                      {item.lastSeen || <span>&nbsp;</span>}
-                    </Card.Text>
-                  </div>
-                  <Card.Text className="text-danger">
-                    {item.owner || <span>&nbsp;</span>}
+                <Card.Body>
+                  <Card.Text className="text-dark">
+                    {item.description}
                   </Card.Text>
+                  <Card.Text className="text-secondary">
+                    {item.lastSeen}
+                  </Card.Text>
+                  <Card.Text className="text-danger">{item.owner}</Card.Text>
+
                   <Button variant="primary" onClick={() => navigate("/")}>
                     Found
                   </Button>
