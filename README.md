@@ -44,9 +44,9 @@
 ### ***Project Preview***
 
 ##### Home Page
-![Home Page](/public/Images/HomePage.png)
+![Home Page](/public/Images/Home_Page.png)
 ##### Add a new item Page
-![Add a new item Page](/public/Images/Newitem.png)
+![Add a new item Page](/public/Images/Form_AddnewItem.png)
 ***
 ### ***Credits***
 
