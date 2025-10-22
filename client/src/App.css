@@ -1,29 +1,29 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .btn-home {
-  margin: 8px;
+  margin: 16px 8px 8px 8px;
   position: relative;
   left: 90%;
-}
-
-.btn-add-item {
-  margin: 8px;
-  position: relative;
-  left: 75%;
 }
 
 .form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 16px;
 }
 
 .custom-form {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 30px 30px 10px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .filed-form {
@@ -76,4 +76,26 @@ body {
 
 .email-link.error {
   color: #e53935;
+}
+
+.btn-add-item {
+  margin: 16px 8px 8px 8px;
+  position: relative;
+  left: 75%;
+}
+
+.title-home {
+  text-align: center;
+  margin: 18px 0px 25px 0px;
+  color: white;
+}
+
+.card-body-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-text-grow {
+  flex-grow: 1;
 }

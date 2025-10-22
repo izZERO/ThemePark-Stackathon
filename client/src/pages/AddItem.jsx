@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+
 import { AddNewItem } from "../services/item.js"
 import { Button, Form } from "react-bootstrap"
 
@@ -10,18 +11,18 @@ const AddItem = () => {
   const initialState = {
     name: "",
     description: "",
-    lastseen: "",
-    ownername: "",
+    lastSeen: "",
+    owner: "",
     status: "Lost",
     email: "",
     image: "",
   }
 
-  const [formValues, setFormValues] = useState(initialState)
+  const [formState, setFormState] = useState(initialState)
 
   const handleChange = (e) => {
-    setFormValues({
-      ...formValues,
+    setFormState({
+      ...formState,
       [e.target.name]:
         e.target.type === "file" ? e.target.files[0] : e.target.value,
     })
@@ -29,9 +30,19 @@ const AddItem = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await AddNewItem(formValues)
-    setFormValues(initialState)
-    console.log(formValues)
+
+    const formData = new FormData()
+    formData.append("name", formState.name)
+    formData.append("description", formState.description)
+    formData.append("lastSeen", formState.lastSeen)
+    formData.append("owner", formState.owner)
+    formData.append("status", formState.status)
+    formData.append("email", formState.email)
+    formData.append("image", formState.image)
+
+    await AddNewItem(formData)
+    setFormState(initialState)
+
     navigate("/")
   }
 
@@ -55,7 +66,7 @@ const AddItem = () => {
               type="text"
               placeholder="Enter item name"
               onChange={handleChange}
-              value={formValues.name}
+              value={formState.name}
               required
               autoComplete="name"
             />
@@ -68,33 +79,34 @@ const AddItem = () => {
               type="text"
               placeholder="Describe the item in detail (color, brand, size...)"
               onChange={handleChange}
-              value={formValues.description}
-              required
+              value={formState.description}
               autoComplete="description"
             />
+            <Form.Text className="text-muted">If available</Form.Text>
           </Form.Group>
-          <Form.Group className="filed-form" controlId="lastseen">
+          <Form.Group className="filed-form" controlId="lastSeen">
             <Form.Label className="filed-label">Last Seen</Form.Label>
             <Form.Control
               className="filed-input"
-              name="lastseen"
+              name="lastSeen"
               type="text"
               placeholder="Approximate place item was lost"
               onChange={handleChange}
-              value={formValues.lastseen}
+              value={formState.lastSeen}
               autoComplete="off"
             />
+            <Form.Text className="text-muted">If available</Form.Text>
           </Form.Group>
-          <Form.Group className="filed-form" controlId="ownername">
+          <Form.Group className="filed-form" controlId="owner">
             <Form.Label className="filed-label">Owner Name</Form.Label>
             <Form.Control
               className="filed-input"
-              name="ownername"
+              name="owner"
               type="text"
               placeholder="Enter your name"
               onChange={handleChange}
-              value={formValues.ownername}
-              autoComplete="ownername"
+              value={formState.owner}
+              autoComplete="owner"
             />
           </Form.Group>
           <Form.Group className="filed-form" controlId="email">
@@ -105,7 +117,7 @@ const AddItem = () => {
               type="email"
               placeholder="example@example.com"
               onChange={handleChange}
-              value={formValues.email}
+              value={formState.email}
               required
               autoComplete="email"
             />
@@ -119,9 +131,10 @@ const AddItem = () => {
               onChange={handleChange}
               accept="image/*"
             />
+            <Form.Text className="text-muted">If available</Form.Text>
           </Form.Group>
           <Button
-            disabled={!formValues.email || !formValues.name}
+            disabled={!formState.email && !formState.name && !formState.owner}
             variant="primary"
             type="submit"
           >
